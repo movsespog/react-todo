@@ -64,7 +64,6 @@ class App extends Component {
         notesArr.push(this.state.noteContent);
         this.setState({noteContent: ''});
         this.textInput.focus();
-
        // this.db.push().set({noteContent: note})
     }
 
@@ -74,11 +73,7 @@ class App extends Component {
             notesArr.push(this.state.noteContent);
             this.setState({noteContent : ''});
         }
-        let URL =`https://avetiq-test.firebaseapp.com/todos/group/${this.state.groupID}/user/${this.state.userID}`;
-        axios.post(URL)
-            .then(response => {
-                console.log(response.data)
-            })
+
     }
 
     deleteNote(index) {
